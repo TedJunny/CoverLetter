@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+
+/* Global */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #f7fcff;
+  --color-light-grey: #a0a09f;
+  --color-dark-grey: #242323;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 4rem;
+  --font-medium-large: 1.75rem;
+  --font-medium: 1.5rem;
+  --font-small: 0.875rem;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 500;
+  --weight-regular: 400;
+
+  /* Font family */
+  --font-libre: "Libre Baskerville", serif;
+}
+
+/* Universal tags */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-semi-bold);
+  font-family: var(--font-libre);
+  color: var(--color-black);
+  margin: 0 0;
+}
+
+h2 {
+  font-size: var(--font-medium-large);
+  font-weight: var(--weight-semi-bold);
+  font-family: var(--font-libre);
+  color: var(--color-black);
+  margin: 2rem 0;
+}
+
+h3 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  font-family: var(--font-libre);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-black);
+  margin: 0.8rem 0;
+}
+
+/* Container */
+#container {
+  width: 100%;
+  height: 100vh;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+#container::after {
+  width: 100%;
+  height: 100vh;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(images/desk_macbook.jpg) center/cover no-repeat fixed;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.navbar__menu {
+  display: flex;
+}
+
+.nav__logo {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+
+.navbar__menu__item {
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.navbar__menu__item:hover {
+  color: lightgrey;
+  padding: 4px 12px;
+  margin: 0 4px;
+}
+
+/* Home */
+#home__title {
+  position: relative;
+  top: 250px;
+}
+
+/* About */
+.section {
+  padding: 3rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#about {
+  background-color: var(--color-white);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.about__selfie {
+  width: 50%;
+  border-radius: 6%;
+  margin: 2rem 0;
+}
+
+/* Gallery */
+.gallery {
+  width: 100%;
+  max-width: 120rem;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+.gallery__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+  /* grid-template-areas: ; */
+}

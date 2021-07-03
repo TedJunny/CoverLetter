@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ted's Cover Letter</title>
+    <meta name="description" content="A Cover Letter about Developer Ted" />
+    <meta name="author" content="Ted" />
+    <link rel="icon" type="image/png" href="images/favicon.ico" />
+    <script
+      src="https://kit.fontawesome.com/cdacd17fec.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- Nav bar -->
+      <nav id="navbar">
+        <div class="nav__logo">
+          <i class="fab fa-uncharted"></i>
+          <a href="">TedJunny</a>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item active">Home</li>
+          <li class="navbar__menu__item">About</li>
+          <li class="navbar__menu__item">Gallery</li>
+          <li class="navbar__menu__item">Contact</li>
+        </ul>
+      </nav>
+      <!-- Home -->
+      <section id="home">
+        <h1 id="home__title">Developer Working On <br />Develop Your Life</h1>
+      </section>
+    </div>
+    <!-- About -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <img src="images/selfie.jpeg" alt="Ted's Selfie" class="about__selfie" />
+      <h3>안녕하세요! 백엔드 개발자 하예준입니다.</h3>
+      <p>
+        만나서 너무 반가워요! 28살 하예준입니다.
+        <br />저는 다른 사람이 나를 통해서 행복의 감정을 경험할 때 가장 큰
+        보람을 느낀답니다. <br />그래서 컴퓨터 언어로 사람들과 소통하는 방법을
+        막 배우기 시작했을 때, <br />더 많은 행복을 사람들에게 전달할 수 있을 것
+        같다는 기대감에 진로를 바꾸는 선택을 할 수 있었어요.
+      </p>
+      <p>
+        앞으로 많은 사람들이 내가 제공하는 서비스를 통해,<br />
+        모두가 그 안에서 가치와 행복을 발견할 수 있도록, 고민하는 개발자가
+        되겠습니다.
+      </p>
+    </section>
+    <!-- Gallery -->
+    <div class="gallery">
+      <div class="gallery__container">
+        <a href="images/Gallery/image_0.jpeg" class="gallery__image__0">
+          <i class="fas fa-expand"></i>
+        </a>
+        <a href="images/Gallery/image_1.jpeg" class="gallery__image__1">
+          <i class="fas fa-expand"></i>
+        </a>
+        <a href="images/Gallery/image_2.jpeg" class="gallery__image__2">
+          <i class="fas fa-expand"></i>
+        </a>
+        <a href="images/Gallery/image_3.jpeg" class="gallery__image__3">
+          <i class="fas fa-expand"></i>
+        </a>
+        <a href="images/Gallery/image_4.jpeg" class="gallery__image__4">
+          <i class="fas fa-expand"></i>
+        </a>
+        <a href="images/Gallery/image_5.jpeg" class="gallery__image__5">
+          <i class="fas fa-expand"></i>
+        </a>
+        <a href="images/Gallery/image_6.jpeg" class="gallery__image__6">
+          <i class="fas fa-expand"></i>
+        </a>
+        <a href="images/Gallery/image_7.jpeg" class="gallery__image__7">
+          <i class="fas fa-expand"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <form action="https://formsubmit.co/hayejun1013@naver.com" method="POST">
+        <input
+          type="hidden"
+          name="_subject"
+          value="새로운 메일이 도착했어요!!!"
+        />
+        <input type="text" name="name" placeholder="Your name" required />
+        <input
+          type="text"
+          name="message"
+          placeholder="Write your message"
+          required
+        />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </body>
+</html>
