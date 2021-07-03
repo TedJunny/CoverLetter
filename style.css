@@ -64,7 +64,7 @@ h2 {
   font-weight: var(--weight-semi-bold);
   font-family: var(--font-libre);
   color: var(--color-black);
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 h3 {
@@ -142,7 +142,7 @@ p {
 
 /* About */
 .section {
-  padding: 3rem;
+  padding: 6rem 1.5rem;
   text-align: center;
   max-width: 1200px;
   margin: auto;
@@ -161,11 +161,10 @@ p {
 }
 
 /* Gallery */
-.gallery {
+#gallery {
   width: 100%;
   max-width: 120rem;
-  margin: auto;
-  padding: 0 1.5rem;
+  background: url(images/background.jpg) center/cover no-repeat fixed;
 }
 
 .gallery__container {
@@ -177,6 +176,7 @@ p {
     "gallery__image__0 gallery__image__1 gallery__image__2 gallery__image__2"
     "gallery__image__0 gallery__image__3 gallery__image__4 gallery__image__5"
     "gallery__image__6 gallery__image__6 gallery__image__7 gallery__image__5";
+  margin: 4rem;
 }
 
 .gallery__container a {
@@ -191,6 +191,18 @@ p {
   justify-content: center;
 }
 
+.gallery__container a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
 .gallery__container a i {
   color: rgba(255, 255, 255, 0.6);
   font-size: 3rem;
@@ -199,18 +211,6 @@ p {
   padding: 1rem 3rem;
   border: 2px solid rgba(255, 255, 255, 0.6);
   border-radius: 0.4rem;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.gallery__container a::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
   transition: opacity 0.5s;
 }
@@ -260,4 +260,48 @@ p {
 .gallery__image__7 {
   grid-area: gallery__image__7;
   background-image: url(images/Gallery/image_7.jpeg);
+}
+
+@media screen and (max-width: 900px) {
+  .gallery__container {
+    grid-template-areas:
+      "gallery__image__0 gallery__image__0 gallery__image__1 gallery__image__1"
+      "gallery__image__0 gallery__image__0 gallery__image__2 gallery__image__2"
+      "gallery__image__3 gallery__image__3 gallery__image__4 gallery__image__4"
+      "gallery__image__5 gallery__image__6 gallery__image__6 gallery__image__6"
+      "gallery__image__7 gallery__image__7 gallery__image__7 gallery__image__7";
+  }
+
+  .gallery__container a {
+    height: 20rem;
+  }
+
+  .gallery__image__0 {
+    min-height: 41.5rem;
+  }
+
+  .gallery__image__5 {
+    min-height: 20rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gallery__container {
+    grid-template-areas:
+      "gallery__image__0 gallery__image__0 gallery__image__0 gallery__image__0"
+      "gallery__image__1 gallery__image__1 gallery__image__1 gallery__image__1"
+      "gallery__image__2 gallery__image__2 gallery__image__2 gallery__image__2"
+      "gallery__image__3 gallery__image__3 gallery__image__3 gallery__image__3"
+      "gallery__image__4 gallery__image__4 gallery__image__4 gallery__image__4"
+      "gallery__image__5 gallery__image__5 gallery__image__5 gallery__image__5"
+      "gallery__image__6 gallery__image__6 gallery__image__6 gallery__image__6"
+      "gallery__image__7 gallery__image__7 gallery__image__7 gallery__image__7";
+  }
+
+  .gallery__container a,
+  .gallery__image__0,
+  .gallery__image__5 {
+    min-height: 30rem;
+    height: 30rem;
+  }
 }
