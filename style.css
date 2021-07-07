@@ -118,6 +118,7 @@ p {
 #navbar.navbar__dark {
   background-color: var(--color-light-grey);
   padding: 0.5rem;
+  z-index: 50;
 }
 
 .navbar__menu {
@@ -162,7 +163,7 @@ p {
 .section {
   padding: 6rem 1.5rem;
   text-align: center;
-  max-width: 1200px;
+  max-width: 2000px;
   margin: auto;
 }
 
@@ -322,4 +323,36 @@ p {
     min-height: 30rem;
     height: 30rem;
   }
+}
+
+/* Contact */
+#contact {
+  width: 100%;
+  background: darkgray center/cover;
+  padding: 1.3rem;
+}
+
+.contact__title,
+.fa-github,
+.fa-home,
+.fa-instagram,
+.fa-envelope,
+.contact__rights {
+  color: var(--color-white);
+}
+
+.contact__links {
+  font-size: var(--font-medium-large);
+  margin-bottom: 1rem;
+}
+
+.contact__links i {
+  margin-left: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact__links i:hover {
+  margin-left: 0.5rem;
+  transform: scale(1.1);
+  color: black;
 }
