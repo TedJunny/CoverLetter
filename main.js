@@ -2,11 +2,12 @@
 
 const navbar = document.querySelector("#navbar");
 const navbarLogo = document.querySelector(".navbar__logo");
+const navbarMenu = document.querySelector(".navbar__menu");
 const navbarHeight = navbar.getBoundingClientRect().height;
 
-const navbarMenu = document.querySelector(".navbar__menu");
+const sections = document.querySelectorAll(".section");
 
-function paintNavbar() {
+function reformNavbar() {
   if (window.scrollY > navbarHeight) {
     navbar.classList.add("navbar__dark");
     navbarLogo.classList.add("navbar__dark");
@@ -33,5 +34,25 @@ function scrollToSection(event) {
   }
 }
 
-document.addEventListener("scroll", paintNavbar);
+function navHighlightOnScroll() {
+  let scrollY = window.scrollY;
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    const sectionId = current.getAttribute("id");
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".navbar__menu li[data-link*=" + sectionId + "]")
+        .classList.add("active");
+    } else {
+      document
+        .querySelector(".navbar__menu li[data-link*=" + sectionId + "]")
+        .classList.remove("active");
+    }
+  });
+}
+
+document.addEventListener("scroll", reformNavbar);
 navbarMenu.addEventListener("click", scrollToSection);
+window.addEventListener("scroll", navHighlightOnScroll);

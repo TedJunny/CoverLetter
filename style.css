@@ -113,6 +113,7 @@ p {
   justify-content: space-between;
   padding: 16px;
   transition: all 0.5s ease-in-out;
+  z-index: 10;
 }
 
 #navbar.navbar__dark {
@@ -155,6 +156,7 @@ p {
 
 /* Home */
 #home__title {
+  text-align: left;
   position: relative;
   top: 250px;
 }
@@ -165,6 +167,7 @@ p {
   text-align: center;
   max-width: 2000px;
   margin: auto;
+  position: relative;
 }
 
 #about {
@@ -226,12 +229,12 @@ p {
   color: rgba(255, 255, 255, 0.6);
   font-size: 3rem;
   position: relative;
-  z-index: 100;
   padding: 1rem 3rem;
   border: 2px solid rgba(255, 255, 255, 0.6);
   border-radius: 0.4rem;
   opacity: 0;
   transition: opacity 0.5s;
+  z-index: 10;
 }
 
 .gallery__container a:hover i,
